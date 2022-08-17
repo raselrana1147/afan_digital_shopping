@@ -1,0 +1,401 @@
+/*--------------*/
+/*-- General --*/
+/*------------*/
+@font-face {
+    font-family: "Din";
+    src: url("font/DIN-Regular.ttf");
+}
+@font-face {
+    font-family: "Din";
+    src: url("font/DIN-Bold.ttf");
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Din";
+    src: url("font/DIN-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Din";
+    src: url("font/DIN-Light.ttf");
+    font-weight: 400;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;;
+    font-size: 14px;
+    margin: 0;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+p{
+    margin-top: 0;
+}
+.mb-0{
+    margin-bottom: 0!important;
+}
+.text-center{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #ccc;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.btn{
+    cursor: pointer;
+}
+
+
+/*--------------*/
+/*-- Layout ---*/
+/*------------*/
+.payment-screen{
+    width: 332px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    color: #ccc;
+    background-color: #fff;
+    overflow: hidden;
+}
+.payment-container{
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center center;
+    border: 6px solid #221f1f;
+    min-height: 628px;
+}
+.mobile-number-screen .payment-container{
+    padding: 0 15px;
+}
+
+/*---------------------*/
+/*-- Lang switcher ---*/
+/*-------------------*/
+.lang-switcher .btn.btn-secondary {
+    font-size: 10px;
+    min-width: 26px!important;
+    padding: 1px;
+    background-color:  #e93b25;
+    color: #fff;
+    border-color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.lang-switcher .btn.btn-secondary:hover, .lang-switcher .btn.btn-secondary.active{
+    background-color: #9f0a0a;
+}
+.lang-switcher {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+/*----------------*/
+/*-- Error ------*/
+/*--------------*/
+.error-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    right: 15px;
+    font-weight: 600;
+}
+
+
+/*----------------*/
+/*-- Merchant ---*/
+/*--------------*/
+.merchant-info {
+    height: 100px;
+    margin-top: 40px;
+}
+
+.top-icon img{
+    height: 60px;
+}
+
+.merchant-name{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    height: 2.4rem;
+    font-weight: bold;
+}
+
+
+/*--------------*/
+/*-- Payment --*/
+/*------------*/
+.payment-infos{
+    text-align: left;
+    padding:40px 0;
+    font-size: 14px;
+}
+.additional-field{
+    line-height: 16px;
+    height: 32px;
+}
+
+
+
+/*--------------*/
+/*---- Form ---*/
+/*------------*/
+.form-container{
+    min-height: 150px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    border: 0;
+    border-radius: .5rem;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: unset;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-group label{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.action-buttons .btn{
+    margin: 0 5px;
+}
+
+.action-buttons.otp-buttons{
+    margin-top: 1.5rem;
+}
+.action-buttons.otp-buttons .btn.bn{
+    font-size: 12px;
+}
+
+.btn{
+    display: inline-block;
+    font-weight: bold;
+    color: #9f0a0a;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border: 1px solid transparent;
+    padding: 1px 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    min-width: 80px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:hover:enabled{
+    background: #9f0a0a;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.box-inputs .form-control {
+    display: inline-block;
+    width: 35px;
+    height: 40px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: .25rem;
+}
+
+.mobile-number-form .form-group label{
+    font-size: 14px;
+}
+.mobile-number-form .box-inputs{
+    display: flex;
+}
+.mobile-number-form .box-inputs .form-control{
+    width: 22px;
+    height: 26px;
+}
+.mobile-number-form .box-inputs .input-divider{
+    font-size: 18px;
+    font-weight: 900;
+}
+.form-check {
+    position: relative;
+    display: block;
+}
+.form-check-input {
+    vertical-align: middle;
+    vertical-align: -2px;
+}
+.form-check-label {
+    margin-bottom: 0;
+}
+.mobile-number-form .form-check {
+    margin-top: 1rem;
+}
+.mobile-number-form .action-buttons{
+    margin-top: 1rem;
+}
+.pin-input input[type="number"] {
+    -webkit-text-security: disc !important;
+    padding: 1px 2px;
+}
+.messages{
+    min-height: 20px;
+}
+.text-error{
+    color: #fbff00;
+}
+.text-info{
+    color: #fff;
+}
+.text-style
+{
+}
+.pointer-icon img
+{
+    height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 17px;
+}
+.pointer-info
+{
+     height: 50px;
+}
+
+/*-----------------*/
+/*-- Nagad Logo --*/
+/*---------------*/
+.nagad-logo{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nagad-logo img{
+    height: 50px;
+}
+
+
+/*-----------------------*/
+/*-- Mobile, vertical --*/
+/*---------------------*/
+@media screen and (max-width: 480px) {
+    .payment-screen{
+        width: 100vw;
+    }
+}
+
+
+/*-------------------------------------*/
+/*-- Mobile, vertical, height > 640 --*/
+/*-----------------------------------*/
+@media screen and (max-width: 480px) and (min-height: 641px) {
+    .payment-screen{
+        height: 100vh;
+        height: -webkit-fill-available;
+        overflow: hidden;
+        background-color: #221f1f;
+    }
+    .payment-container{
+        height: 98vh;
+        height: -webkit-fill-available;
+    }
+    .merchant-info {
+        height: 100px;
+        margin-top: 7vh;
+    }
+    .merchant-name {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        height: 3rem;
+    }
+}
+
+/*-------------------------------------*/
+/*-- Mobile, vertical, height > 700 --*/
+/*-----------------------------------*/
+@media screen and (max-width: 480px) and (min-height: 700px){
+    .payment-infos{
+        padding: 10vh 0;
+        font-size: 1rem;
+    }
+    .nagad-logo{
+        bottom: 2.5rem;
+    }
+}
